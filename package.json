@@ -1,0 +1,132 @@
+{
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --env.NODE_ENV=production",
+    "start": "./node_modules/.bin/webpack --env.NODE_ENV=dev --watch",
+    "test": "./node_modules/.bin/jest",
+    "svg": "svgr --no-dimensions -d assets/react/components/ui/svg/ assets/react/static/svg/"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "> 1%",
+              "safari >= 10"
+            ],
+            "node": "current"
+          },
+          "useBuiltIns": true
+        }
+      ],
+      "react",
+      "stage-3",
+      "jest"
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-decorators-legacy"
+    ],
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "jest": true,
+      "node": true
+    }
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.4",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.6.0",
+    "core-js": "^2.6.5",
+    "css-loader": "^0.28.11",
+    "dom-testing-library": "^2.9.1",
+    "file-loader": "^1.1.6",
+    "hard-source-webpack-plugin": "^0.6.12",
+    "imports-loader": "^0.7.1",
+    "jest": "^23.6.0",
+    "jest-dom": "^2.1.1",
+    "node-sass": "^4.8.2",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-loader": "^2.1.6",
+    "regenerator-runtime": "^0.11.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.1",
+    "stylelint": "^8.4.0",
+    "stylelint-declaration-use-variable": "^1.7.0",
+    "stylelint-order": "^0.8.0",
+    "stylelint-scss": "^2.5.0",
+    "stylelint-suitcss": "^2.0.0",
+    "svg-react-loader": "^0.4.5",
+    "svg-url-loader": "^2.3.2",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "url-loader": "^0.6.2",
+    "webpack": "3.11.0",
+    "webpack-concat-plugin": "^2.4.2",
+    "webpack-livereload-plugin": "^1.2.0",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@svgr/cli": "^2.4.1",
+    "aphrodite-jss": "^2.1.0",
+    "autobind-decorator": "^2.1.0",
+    "axios": "^0.16.2",
+    "backbone": "^1.4.0",
+    "bodymovin": "^4.10.2",
+    "bxslider": "^4.2.14",
+    "classnames": "^2.2.6",
+    "es6-promise": "^4.2.6",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "fast-safe-stringify": "^2.0.6",
+    "gsap": "^1.20.6",
+    "hammerjs": "^2.0.8",
+    "isomorphic-fetch": "^2.2.1",
+    "jointjs": "^2.2.1",
+    "json-loader": "^0.5.7",
+    "lodash": "^3.10.1",
+    "md5": "^2.2.1",
+    "moment": "^2.24.0",
+    "multiple-select": "1.2.1",
+    "postscribe": "^2.0.8",
+    "qs": "^6.7.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-cx": "^0.1.12",
+    "react-reveal": "^1.2.2",
+    "smart-app-banner": "^1.5.1",
+    "unorm": "^1.5.0",
+    "url-parse": "^1.4.4",
+    "waypoints": "^4.0.1"
+  },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/",
+    "modulePathIgnorePatterns": [
+      "./package.json"
+    ]
+  }
+}

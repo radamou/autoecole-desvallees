@@ -1,12 +1,32 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<!doctype html>
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    {% block head %}
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Auto ecole des vallées</title>
+        {# ICONS #}
+        <link href="{{ asset("/favicon.ico") }}" rel="shortcut icon" />
+        <link rel="apple-touch-icon" href="{{asset("/touch-icon.png")}}" />
+        <link rel="apple-touch-icon-precomposed" href="{{asset("/touch-icon-precomposed.png")}}" />
+        {% for size in ["57x57", "60x60", "72x72", "76x76", "114x114", "120x120", "144x144", "152x152", "167x167", "180x180", "512x512"] %}
+            <link rel="apple-touch-icon" sizes="{{ size }}" href="{{asset("/touch-icon-" ~ size ~ ".png") }}" />
+            <link rel="apple-touch-icon-precomposed" sizes="{{ size }}" href="{{asset("/touch-icon-" ~ size ~ "-precomposed.png") }}" />
+        {% endfor %}
+
+        {# STYLE #}
+        {% block headStyle %}{% endblock %}
+    {% endblock %}
+</head>
+
+<body role="document" >
+{% block body %}
+{% endblock %}
+
+{% block footScriptApp %}
+    <script src="{{ asset('build/js/app.js') }}"></script>
+{% endblock %}
+{% block javascript %}{% endblock %}
+</body>
 </html>
