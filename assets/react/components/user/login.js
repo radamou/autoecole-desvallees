@@ -1,23 +1,29 @@
-class Login extends React.Component {
-    renderLogin() {
-        return <Login />
-    }
+import React, { Component } from 'react';
+import { Button } from '@material-ui/core';
+import { loginStyles } from "./loginStyle";
 
-    render() {
-        return (
-            <div className="login-page">
-                <div className="login-page__presentation-area">
+export default function Login() {
+    const loginCss = loginStyles();
 
-                </div>
-                <div className="login-page__form">
-                    <div className="login-page__Form--email"><input/></div>
-                    <div className="login-page__form--password"><input/></div>
+    return (
+        <div className={ loginCss.root }>
+            <div className={ loginCss.rootPresentation }>
+                <img src="" alt="auto ecole des vallées" />
+            </div>
+            <div className="login-page__form">
+                <div className="form">
+                    <div className="email"><input/></div>
+                    <div className="password"><input/></div>
                 </div>
                 <div className="login-page__socials-media">
-                    <div className="login-page__socials-media--facebook"><button/></div>
-                    <div className="login-page__socials-media--gmail"><button/></div>
+                    <div className="login-page__socials-media--facebook">
+                        <Button color="primary" variant="contained">facebook</Button>
+                    </div>
+                    <div className="login-page__socials-media--gmail">
+                        <Button color="primary" variant="contained">Gmail</Button>
+                    </div>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
