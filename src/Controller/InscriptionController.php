@@ -6,11 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class AppController extends AbstractController
+class InscriptionController extends AbstractController
 {
-     /** @Route("/login") */
+     /** @Route("/inscription") */
     public function __invoke(): Response
     {
-        return $this->render('Account/login.html.twig');
+        return $this->render('Account/inscription.html.twig');
     }
 }

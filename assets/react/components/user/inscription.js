@@ -1,11 +1,13 @@
 import React from 'react';
+import { inscriptionStyles } from "./inscriptionStyle";
 import { formStyles } from "assets/react/components/ui/formFieldStyle";
-import image from 'assets/images/car.jpg';
+import image from 'assets/images/inscription.jpg';
 import logo from 'assets/images/logo.png'
 import facebook from 'assets/images/facebook.svg'
 import gmail from 'assets/images/gmail.svg'
 
-export default function Login() {
+export default function Inscription() {
+    const inscription = inscriptionStyles();
     const formStyle = formStyles();
 
     return (
@@ -24,9 +26,9 @@ export default function Login() {
                             src={logo} alt="auto école des vallées"
                         />
                     </div>
-                    <p className={formStyle.formTitle}>Connexion</p>
+                    <p className={formStyle.formTitle}>Inscription</p>
                     <p className={formStyle.formDescription}>
-                        Veuillez renseigner vos identifiants de connexion
+                        Créer votre nouveau compte
                     </p>
                     <div className={formStyle.formField}>
                         <label className={formStyle.controlLabel}>Adresse Email</label>
@@ -37,11 +39,11 @@ export default function Login() {
                         <input type="password" placeholder="votreemail@email.com" className={formStyle.formControl} />
                     </div>
                     <div className={formStyle.formSubmitGroup}>
-                        <p className={formStyle.inscriptionTitle}>Vous n'avez pas encore de compte ?
+                        <p className={formStyle.inscriptionTitle}>Vous êtes déjè inscrit ?
                             <a
-                            href="/inscription"
-                            className={formStyle.link}>
-                                Inscription
+                                href="/login"
+                                className={formStyle.link}>
+                                connectez-vous
                             </a>
                         </p>
                         <button className={formStyle.formSubmitButton} type="submit">

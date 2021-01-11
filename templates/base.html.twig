@@ -14,9 +14,13 @@
             <link rel="apple-touch-icon" sizes="{{ size }}" href="{{asset("/touch-icon-" ~ size ~ ".png") }}" />
             <link rel="apple-touch-icon-precomposed" sizes="{{ size }}" href="{{asset("/touch-icon-" ~ size ~ "-precomposed.png") }}" />
         {% endfor %}
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
 
         {# STYLE #}
-        {% block headStyle %}{% endblock %}
+        {% block headStyle %}
+            <link rel="stylesheet" href="{{ asset("css/style.css") }}">
+        {% endblock %}
     {% endblock %}
 </head>
 
