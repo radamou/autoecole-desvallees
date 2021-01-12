@@ -24,6 +24,21 @@ export default function Login() {
                             src={logo} alt="auto école des vallées"
                         />
                     </div>
+                    <div className={formStyle.SocialMediaLogin}>
+                        <button className={formStyle.socialMediaButton}>
+                            <span className={formStyle.socialMediaText}><img src={facebook} alt="connexion facebook"/></span>
+                            Connexion avec facebook
+                        </button>
+                        <button className={formStyle.socialMediaButton}>
+                            <span className={formStyle.socialMediaText}>
+                                <img className={formStyle.connexionImg} src={gmail} alt="connexion gmail"/>
+                            </span>
+                            Connexion avec Gmail
+                        </button>
+                    </div>
+                    <div className={formStyle.connexionSeparator}>
+                        <span className={formStyle.loginSeparatorText}>Connectez-vous avec</span>
+                    </div>
                     <p className={formStyle.formTitle}>Connexion</p>
                     <p className={formStyle.formDescription}>
                         Veuillez renseigner vos identifiants de connexion
@@ -36,7 +51,7 @@ export default function Login() {
                         <label className={formStyle.controlLabel}>Mot de passe</label>
                         <input type="password" placeholder="votreemail@email.com" className={formStyle.formControl} />
                     </div>
-                    <div className={formStyle.formSubmitGroup}>
+                    <div className={formStyle.formGroup}>
                         <p className={formStyle.inscriptionTitle}>Vous n'avez pas encore de compte ?
                             <a
                             href="/inscription"
@@ -46,21 +61,6 @@ export default function Login() {
                         </p>
                         <button className={formStyle.formSubmitButton} type="submit">
                             Connexion
-                        </button>
-                    </div>
-                    <div className={formStyle.connexionSeparator}>
-                        <span className={formStyle.loginSeparatorText}>Connectez-vous avec</span>
-                    </div>
-                    <div className={formStyle.SocialMediaLogin}>
-                        <button className={formStyle.socialMediaButton}>
-                            <span className={formStyle.socialMediaText}><img src={facebook} alt="connexion facebook"/></span>
-                            Connexion avec facebook
-                        </button>
-                        <button className={formStyle.socialMediaButton}>
-                            <span className={formStyle.socialMediaText}>
-                                <img className={formStyle.connexionImg} src={gmail} alt="connexion gmail"/>
-                            </span>
-                            Connexion avec Gmail
                         </button>
                     </div>
                 </div>

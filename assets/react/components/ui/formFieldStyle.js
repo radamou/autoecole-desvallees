@@ -27,7 +27,8 @@ export const formStyles = makeStyles({
         textAlign: 'left',
         marginBottom: '8px',
         marginTop: '75px',
-        width: '50%'
+        width: '50%',
+        margin: 'auto'
     },
     formLogoImage: {
         maxWidth: '100%'
@@ -48,13 +49,13 @@ export const formStyles = makeStyles({
     },
     formControl: {
         height: '3.125rem',
-        border: '1px solid ',
+        border: '1px solid #dcdcdc',
         display: 'block',
         borderRadius: '.3rem',
         padding: '.1rem .75rem',
         lineHeight: '1.5',
         fontSize: '1rem',
-        width: '95%'
+        width: '90%'
     },
     controlLabel: {
         display: 'inline-block',
@@ -62,7 +63,13 @@ export const formStyles = makeStyles({
         fontWeight: 500,
         fontSize: '.81rem'
     },
-    formSubmitGroup: {
+    group: {
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row',
+        display: 'flex'
+    },
+    formGroup: {
         marginBottom: '48px',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -105,7 +112,7 @@ export const formStyles = makeStyles({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: '40px'
+        margin: '40px 0'
     },
 
     loginSeparatorText: {
@@ -117,7 +124,7 @@ export const formStyles = makeStyles({
 
     SocialMediaLogin: {
         display: 'flex',
-        marginBottom: '30px',
+        margin: '30px 0',
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row'
