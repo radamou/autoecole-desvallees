@@ -28,7 +28,8 @@ export const styles = makeStyles({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '30%',
-    marginRight: '20px'
+    marginRight: '20px',
+    fontWeight: '700',
   },
 
   headerUser: {
@@ -48,17 +49,16 @@ export const styles = makeStyles({
   },
 
   userInscriptionTitle: {
-    fontSize: '12px',
     lineHeight: '1.83',
     textAlign: 'center',
-    fontWeight: 400,
+    fontWeight: 700,
     fontStretch: 'normal',
     fontStyle: 'normal'
   },
+
   userLink: {
-    textDecoration: 'underline',
+    textDecoration: 'none',
     color: '#000',
-    marginLeft: '20px',
     fontWeight: '700'
   },
 
@@ -89,4 +89,6 @@ export const styles = makeStyles({
     margin: 'auto',
     padding: 'auto'
   }
+
+
 })

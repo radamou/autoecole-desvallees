@@ -19,10 +19,12 @@ export default function Login() {
             <form className={formStyle.form}>
                 <div className={formStyle.formContainer}>
                     <div className={formStyle.formLogoContainer}>
-                        <img
-                            className={ formStyle.formLogoImage}
-                            src={logo} alt="auto école des vallées"
-                        />
+                        <a href="/">
+                            <img
+                                className={ formStyle.formLogoImage}
+                                src={logo} alt="auto école des vallées"
+                            />
+                        </a>
                     </div>
                     <div className={formStyle.SocialMediaLogin}>
                         <button className={formStyle.socialMediaButton}>
