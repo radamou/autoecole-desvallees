@@ -80,7 +80,6 @@ export const styles = makeStyles({
 
   container: {
     height: '400px',
-    position: 'absolute',
     display: 'block',
     backgroundColor: '#2f3a4f',
     width: '100%',
@@ -89,6 +88,4 @@ export const styles = makeStyles({
     margin: 'auto',
     padding: 'auto'
   }
-
-
 })
