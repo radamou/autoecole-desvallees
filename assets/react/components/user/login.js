@@ -36,8 +36,8 @@ export default function Login() {
                             Connexion avec Gmail
                         </button>
                     </div>
-                    <div className={formStyle.connexionSeparator}>
-                        <span className={formStyle.loginSeparatorText}>Connectez-vous avec</span>
+                    <div className={formStyle.separator}>
+                        <span className={formStyle.separatorText}>Connectez-vous avec</span>
                     </div>
                     <p className={formStyle.formTitle}>Connexion</p>
                     <p className={formStyle.formDescription}>

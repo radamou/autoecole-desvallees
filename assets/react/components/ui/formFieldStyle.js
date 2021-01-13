@@ -55,7 +55,7 @@ export const formStyles = makeStyles({
         padding: '.1rem .75rem',
         lineHeight: '1.5',
         fontSize: '1rem',
-        width: '90%'
+        width: '95%'
     },
     controlLabel: {
         display: 'inline-block',
@@ -106,7 +106,7 @@ export const formStyles = makeStyles({
         lineHeight: 'normal',
         letterSpacing: 'normal'
     },
-    connexionSeparator : {
+    separator : {
         height: '1px',
         backgroundColor: '#dcdcdc',
         display: 'flex',
@@ -115,7 +115,7 @@ export const formStyles = makeStyles({
         margin: '40px 0'
     },
 
-    loginSeparatorText: {
+    separatorText: {
         width: '127px',
         fontSize: '12px',
         backgroundColor: '#fff',

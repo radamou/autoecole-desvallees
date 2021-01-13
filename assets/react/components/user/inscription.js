@@ -36,8 +36,8 @@ export default function Inscription() {
                             Créer un compte via Gmail
                         </button>
                     </div>
-                    <div className={formStyle.connexionSeparator}>
-                        <span className={formStyle.loginSeparatorText}>ou</span>
+                    <div className={formStyle.separator}>
+                        <span className={formStyle.separatorText}>ou</span>
                     </div>
                     <p className={formStyle.formTitle}>Inscription</p>
                     <p className={formStyle.formDescription}>
@@ -63,7 +63,6 @@ export default function Inscription() {
                             <input type="text" placeholder="numéro de téléphone" className={formStyle.formControl} />
                         </div>
                     </div>
-
                     <div className={formStyle.formField}>
                         <label className={formStyle.controlLabel}>Mot de passe</label>
                         <input type="password" placeholder="mot de passe" className={formStyle.formControl} />
