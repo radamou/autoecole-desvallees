@@ -1,5 +1,4 @@
 name: app
-
 type: php:7.4
 
 runtime:
@@ -9,12 +8,11 @@ runtime:
         - sodium
         - iconv
         - ctype
-        
 
-#variables:
-#    php:
-#        # uncomment on PHP 7.4+
-#        #opcache.preload: /app/config/preload.php
+variables:
+    php:
+        # uncomment on PHP 7.4+
+        opcache.preload: /app/config/preload.php
 
 build:
     flavor: none
@@ -27,8 +25,8 @@ web:
             root: "public"
             expires: 1h
             passthru: "/index.php"
-
-
+    commands:
+        start: "yarn start"
 
 mounts:
     "/var": { source: local, source_path: var }
