@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     nameContainer: {
         paddingTop: 20
     },
-    
+
     name: {
         fontSize: 15,
         fontWeight: 700,
