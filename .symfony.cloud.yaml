@@ -25,8 +25,6 @@ web:
             root: "public"
             expires: 1h
             passthru: "/index.php"
-    commands:
-        start: "yarn install && yarn start"
 
 mounts:
     "/var": { source: local, source_path: var }
@@ -38,8 +36,11 @@ hooks:
         curl -fs https://get.symfony.com/cloud/configurator | (>&2 bash)
         
         (>&2 symfony-build)
+        (>&2 yarn install)
 
     deploy: |
         set -x -e
 
         (>&2 symfony-deploy)
+    post_deploy: |
+        (>&2 yarn start)
