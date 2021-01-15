@@ -36,11 +36,11 @@ hooks:
         curl -fs https://get.symfony.com/cloud/configurator | (>&2 bash)
         
         (>&2 symfony-build)
-        (>&2 yarn install)
+        (>&2 npm install)
 
     deploy: |
         set -x -e
 
         (>&2 symfony-deploy)
     post_deploy: |
-        (>&2 yarn start)
+        (>&2 npm start)
