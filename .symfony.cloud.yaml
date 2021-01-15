@@ -37,10 +37,9 @@ hooks:
         
         (>&2 symfony-build)
         (>&2 npm install)
+        (>&2 npm install)
 
     deploy: |
         set -x -e
 
         (>&2 symfony-deploy)
-    post_deploy: |
-        (>&2 npm start)
