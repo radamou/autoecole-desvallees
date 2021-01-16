@@ -1,5 +1,5 @@
 import React from 'react';
-import { formStyles } from "assets/react/components/ui/formFieldStyle";
+import { formStyles } from "assets/react/components/style/pages/user";
 import image from 'assets/images/car.jpg';
 import logo from 'assets/images/logo.png'
 import facebook from 'assets/images/facebook.svg'

@@ -1,5 +1,5 @@
 import React from 'react';
-import { styles } from "assets/react/components/home/formulasStyle";
+import { styles } from "assets/react/components/style/organisms/formulas";
 import MediaCard from "assets/react/components/organisms/card";
 
 export default function Formulas() {

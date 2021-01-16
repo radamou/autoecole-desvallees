@@ -1,7 +1,7 @@
 import React from 'react';
-import { styles } from "assets/react/components/home/resultsStyle";
+import { styles } from "assets/react/components/style/organisms/statistics";
 
-export default function Results() {
+export default function Statistics() {
     const style = styles();
 
     return (

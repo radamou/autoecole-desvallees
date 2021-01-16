@@ -1,5 +1,5 @@
 import React from 'react';
-import { styles } from "assets/react/components/home/monitorsStyle";
+import { styles } from "assets/react/components/style/organisms/monitors";
 import MonitorCard from "assets/react/components/organisms/monitorCard";
 
 export default function Monitors() {

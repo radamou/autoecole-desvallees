@@ -1,5 +1,5 @@
 import React from 'react';
-import { styles } from "assets/react/components/home/style";
+import { styles } from "assets/react/components/style/pages/home";
 import logo from "assets/images/logo.png";
 
 export default function Header() {
