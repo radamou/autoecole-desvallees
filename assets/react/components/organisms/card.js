@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -8,22 +7,14 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import image from "assets/images/applications.jpg";
-
-const useStyles = makeStyles({
-    root: {
-        margin: 20
-    },
-    media: {
-        height: 140,
-    },
-
-    link: {
-        textDecoration: 'none',
-    }
-});
+import { formulas } from "assets/data/formulas";
+import { fr } from "assets/translation/fr";
+import { SHOP_LINK } from "assets/routing";
+import { useStyles } from "assets/react/components/style/organisms/formulaCard"
 
 export default function MediaCard() {
     const classes = useStyles();
+
     return (
         <Card className={classes.root}>
             <CardActionArea>
@@ -34,23 +25,20 @@ export default function MediaCard() {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h4" component="h2">
-                        Code de la route
+                        { formulas.one.title }
                     </Typography>
                     <Typography gutterBottom variant="h4" component="h2">
-                       A partir de 350
+                        { fr.formulas.price } { formulas.one.price }
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Frais administratifs
-                        Code en salle (1 an)
-                        Accès code en ligne (6 mois)
-                        Présentation examen du code
+                        { formulas.one.description }
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <a href='/boutique' className={classes.link}>
+                <a href={ SHOP_LINK } className={classes.link}>
                     <Button size="small" color="primary">
-                        Découvrir nos offres
+                        { fr.formulas.shopAccessLink }
                     </Button>
                 </a>
             </CardActions>

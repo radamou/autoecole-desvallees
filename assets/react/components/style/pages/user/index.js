@@ -144,8 +144,8 @@ export const formStyles = makeStyles({
         marginRight: '12px',
         justifyContent: 'center'
     },
-    connexionImg: {
+    gmailImg: {
         width: '32px',
-        height: '32px'
+        height: '35px'
     }
 })
