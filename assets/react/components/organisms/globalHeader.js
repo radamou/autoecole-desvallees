@@ -1,22 +1,30 @@
 import React from "react";
 import { styles } from 'assets/react/components/style/organisms/globalHeader'
-import logo from "assets/images/logo.png";
-import { HOME_PAGE } from "assets/routing";
-import { fr } from "assets/translation/fr";
+import GlobalHeaderMenu from "assets/react/components/organisms/globalHeaderMenu";
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import {withStyles} from "@material-ui/core/styles";
 
-export default function GlobalHeader() {
+export default function GlobalHeader(props) {
     const classes = styles();
+    const StyledBasketIcon = withStyles((theme) => ({
+        root: {
+            height: '15px',
+            width: '15px',
+            borderRadius: '50%',
+            padding: '7px',
+            backgroundColor: '#d3215f',
+            color: '#fff',
+            cursor: 'pointer'
+        },
+    }))(ShoppingBasketIcon);
 
     return (
-        <div className={classes.root}>
-            <div className={classes.logoContainer}>
-                <a href={ HOME_PAGE }>
-                    <img
-                        className={classes.LogoImg}
-                        src={logo} alt={ fr.logo.alt }
-                    />
-                </a>
-            </div>
-        </div>
+        <header className={classes.root}>
+            <ul className={classes.menu}>
+                <li><StyledBasketIcon fontSize={"small"} /></li>
+                <li className={classes.separator} />
+                <li><GlobalHeaderMenu user={props.user}/></li>
+            </ul>
+        </header>
     );
 }

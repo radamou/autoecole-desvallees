@@ -2,21 +2,31 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const styles = makeStyles({
     root: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        width: '10%',
-        padding: '2rem  .9rem .9rem',
-        boxShadow: '0 2px 24px 0 rgba(0,24,31,.04), 0 4px 8px 0 rgba(0,42,54,.02)',
+        zIndex: 999,
         position: 'fixed',
-        overflow: 'auto',
-        height: '100vh'
-    },
-    logoContainer: {
         width: '90%',
-        maxHeight: '50px',
+        left: '11.5%',
+        backgroundColor: '#fff',
+        height: '5rem',
+        borderBottom: '1px solid #E9ECEF',
+        display: 'flex',
+        justifyContent: 'flex-end',
+        flexDirection: 'row'
     },
-    LogoImg: {
-        maxWidth: '100%'
+    
+    menu: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        width: '15%',
+        alignItems: 'center',
+        paddingRight: '3%',
+        listStyle: 'none'
+    },
+
+    separator: {
+        width: '1px',
+        height: '32px',
+        backgroundColor: '#E9ECEF'
     }
 })

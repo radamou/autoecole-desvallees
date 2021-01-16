@@ -1,6 +1,9 @@
 import { styles } from "assets/react/components/style/pages/shop";
-import Header from "assets/react/components/organisms/globalHeader";
+
 import React from "react";
+import Sidebar from "assets/react/components/organisms/sidebar";
+import GlobalHeader from "assets/react/components/organisms/globalHeader";
+import {user} from "assets/data/user";
 
 export default function Shop() {
     const style = styles();
@@ -8,7 +11,8 @@ export default function Shop() {
     return (
         <div className={ style.root }>
             <div className={style.container}>
-                <Header/>
+                <GlobalHeader user={user}/>
+                <Sidebar/>
             </div>
         </div>
     )

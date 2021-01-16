@@ -79,5 +79,10 @@ export const fr = {
                 password: 'Mot de passe'
             }
         }
+    },
+    globalHeaderMenu: {
+        accountAccess: 'Mon compte',
+        help: 'Centre d\'aide',
+        disconnect: 'Déconnexion'
     }
 }
