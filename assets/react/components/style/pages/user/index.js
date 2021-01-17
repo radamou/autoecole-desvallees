@@ -1,10 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const formStyles = makeStyles({
+export const formStyles = makeStyles( theme => ({
     root: {
         display: 'grid',
         gridTemplateColumns: 'repeat(2,1fr)',
-        height: '100vh'
+        height: '100vh',
+        [theme.breakpoints.down("sm")]: {
+            gridTemplateColumns: 'auto'
+        }
     },
     rootPresentation: {
         display: 'unset'
@@ -12,7 +15,10 @@ export const formStyles = makeStyles({
     rootPresentationImage: {
         height: '100%',
         width: '100%',
-        objectFit: 'cover'
+        objectFit: 'cover',
+        [theme.breakpoints.down("sm")]: {
+            width: '0'
+        }
     },
     form: {
         height: '100%',
@@ -21,7 +27,13 @@ export const formStyles = makeStyles({
     formContainer: {
         maxWidth: '50%',
         padding: '25px',
-        margin: 'auto'
+        margin: 'auto',
+        [theme.breakpoints.between("sm", "lg")]: {
+            maxWidth: '85%',
+        },
+        [theme.breakpoints.down("xs")]: {
+            maxWidth: '90%',
+        },
     },
     formLogoContainer: {
         textAlign: 'left',
@@ -66,8 +78,10 @@ export const formStyles = makeStyles({
     group: {
         justifyContent: 'space-between',
         alignItems: 'center',
-        flexDirection: 'row',
-        display: 'flex'
+        display: 'flex',
+        [theme.breakpoints.down("xs")]: {
+            flexDirection: 'column',
+        }
     },
     formGroup: {
         marginBottom: '48px',
@@ -127,7 +141,11 @@ export const formStyles = makeStyles({
         margin: '30px 0',
         alignItems: 'center',
         justifyContent: 'space-between',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        [theme.breakpoints.down("xs")]: {
+            flexDirection: 'column',
+            alignItems: 'initial',
+        }
     },
     socialMediaButton: {
         display: 'inline-flex',
@@ -135,7 +153,10 @@ export const formStyles = makeStyles({
         border: '1px solid #DCDCDC',
         borderRadius: '15px',
         borderBottomLeftRadius: '0',
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
+        [theme.breakpoints.down("xs")]: {
+            marginBottom: '5px',
+        }
     },
     socialMediaText: {
         display: 'inline-flex',
@@ -148,4 +169,4 @@ export const formStyles = makeStyles({
         width: '32px',
         height: '35px'
     }
-})
+}))
