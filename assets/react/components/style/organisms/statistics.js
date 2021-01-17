@@ -3,8 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 export const styles = makeStyles(theme =>({
     root: {
         width: '50%',
-        [theme.breakpoints.between("sm", "lg")]: {
+        [theme.breakpoints.between("md", "lg")]: {
             width: '70%',
+        },
+        [theme.breakpoints.down("sm")]: {
+            width: '85%',
         },
         [theme.breakpoints.down("xs")]: {
             width: '100%',

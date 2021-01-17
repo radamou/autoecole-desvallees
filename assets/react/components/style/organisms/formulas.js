@@ -9,8 +9,13 @@ export const styles = makeStyles(theme => ({
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'row',
-        [theme.breakpoints.between("sm", "lg")]: {
+        [theme.breakpoints.down("md")]: {
             width: '85%',
+            padding: 20
+        },
+        [theme.breakpoints.down("sm")]: {
+            width: '95%',
+            padding: 0
         },
         [theme.breakpoints.down("xs")]: {
             width: '100%',
