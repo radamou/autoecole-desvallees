@@ -13,6 +13,7 @@ export default function Shop() {
             <div className={style.container}>
                 <GlobalHeader user={user}/>
                 <Sidebar/>
+
             </div>
         </div>
     )

@@ -1,9 +1,12 @@
 import {makeStyles} from "@material-ui/core/styles";
 
-export const useStyles = makeStyles({
+export const useStyles = makeStyles(theme => ({
     root: {
         margin: 20,
-        width: '28%'
+        width: '28%',
+        [theme.breakpoints.down("xs")]: {
+            width: '90%'
+        }
     },
     media: {
         height: 300,
@@ -21,4 +24,4 @@ export const useStyles = makeStyles({
         fontWeight: 700,
         color: '#d3215f',
     }
-});
+}));

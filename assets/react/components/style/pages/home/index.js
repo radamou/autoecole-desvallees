@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const styles = makeStyles({
+export const styles = makeStyles(theme => ({
   root: {
     width: '100%',
   },
@@ -15,6 +15,12 @@ export const styles = makeStyles({
   headerMenuContainer: {
     margin: 'auto',
     width: '50%',
+    [theme.breakpoints.between("sm", "lg")]: {
+      width: '70%',
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: '100%',
+    },
     padding: '15px',
     display: 'flex',
     alignItems: 'center',
@@ -88,4 +94,4 @@ export const styles = makeStyles({
     margin: 'auto',
     padding: 'auto'
   }
-})
+}))
